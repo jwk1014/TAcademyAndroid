@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:valueFrom="#ff0000"
+    android:valueTo="#0000ff"
+    android:repeatCount="infinite"
+    android:repeatMode="reverse">
+</animator>

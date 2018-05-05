@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="marker"
+        android:id="@+id/btn_marker"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/mapView"
+        android:layout_alignEnd="@+id/mapView" />
+
+    <com.skp.Tmap.TMapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapView"
+        android:layout_below="@+id/btn_marker"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/btn_search"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btn_marker"
+        android:layout_toStartOf="@+id/btn_marker" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_keyword"
+        android:layout_above="@+id/mapView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btn_search"
+        android:layout_toStartOf="@+id/btn_search" />
+
+    <ListView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/edit_keyword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R"
+        android:id="@+id/btn_route"
+        android:layout_below="@+id/btn_marker"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_route"
+        android:layout_toLeftOf="@+id/btn_route"
+        android:layout_toStartOf="@+id/btn_route"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start"
+            android:id="@+id/radio_start"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="end"
+            android:id="@+id/radio_end"
+            android:checked="false" />
+    </RadioGroup>
+
+</RelativeLayout>

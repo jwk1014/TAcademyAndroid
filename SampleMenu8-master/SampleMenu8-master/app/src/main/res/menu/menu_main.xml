@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_item1"
+        android:title="M1"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_input_add"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionLayout="@layout/menu_layout"
+       />
+
+    <item android:id="@+id/menu_item3"
+        android:title="M2"
+        android:orderInCategory="101"
+        android:icon="@android:drawable/ic_input_get"
+        app:showAsAction="always"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+
+    <item android:id="@+id/menu_item2"
+        android:title="M3"
+        android:orderInCategory="102"
+        app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/sub_item1"
+                android:title="SM1"
+                android:orderInCategory="200">
+                <menu>
+                    <item android:id="@+id/sub_sub1"
+                        android:title="SSM1"
+                        android:orderInCategory="300"/>
+                    <item android:id="@+id/sub_sub2"
+                        android:title="SSM2"
+                        android:orderInCategory="301"/>
+                </menu>
+            </item>
+            <item android:id="@+id/sub_item2"
+                android:title="SM2"
+                android:orderInCategory="201" />
+            <item android:id="@+id/sub_item3"
+                android:title="SM3"
+                android:orderInCategory="202" />
+        </menu>
+    </item>
+
+    <item android:id="@+id/menu_item4"
+        android:title="M4"
+        android:orderInCategory="103"/>
+</menu>

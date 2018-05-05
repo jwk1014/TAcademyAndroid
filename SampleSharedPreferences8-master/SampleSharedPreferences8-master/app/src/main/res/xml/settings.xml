@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Options"
+        android:summary="detail settings" >
+        <CheckBoxPreference
+            android:key="perf_sync"
+            android:title="push"
+            android:summary="on/off" />
+        <EditTextPreference
+            android:dependency="perf_sync"
+            android:key="perf_name"
+            android:summary="backup file name"
+            android:title="backup file name" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu_item1"
+            android:title="M1"
+            android:icon="@android:drawable/ic_input_add"
+            android:orderInCategory="100" />
+        <item android:id="@+id/menu_item2"
+            android:title="M2"
+            android:icon="@android:drawable/ic_input_delete"
+            android:orderInCategory="101" />
+        <item android:id="@+id/menu_item3"
+            android:title="M3"
+            android:icon="@android:drawable/ic_input_get"
+            android:orderInCategory="102" />
+    </group>
+
+    <item android:title="Sub1">
+        <menu>
+            <item android:id="@+id/menu_sub1"
+                android:title="S1"
+                android:icon="@android:drawable/ic_dialog_dialer"/>
+            <item android:id="@+id/menu_sub2"
+                android:title="S2"
+                android:icon="@android:drawable/ic_dialog_map"/>
+
+        </menu>
+    </item>
+</menu>
